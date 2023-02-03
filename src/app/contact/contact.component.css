@@ -1,0 +1,58 @@
+.container{
+    display: flex;
+    flex-direction: column;
+    margin-top: 1rem;
+}
+
+h1{
+    display: inline-block;
+    margin: 0 auto 1.5rem;
+    position: relative;
+}
+
+h1::after{
+    content: '';
+    position: absolute;
+    width: 120%;
+    height: 4px;
+    background: var(--blue);
+    left: -10%;
+    bottom: 0;
+    border-radius: 2px;
+}
+
+.icon{
+    font-size: 1.5rem;    
+}
+
+.column{
+    display: flex;
+    justify-content: space-around;
+    flex-basis: 35%;
+    padding: 0 1rem;
+}
+
+.con{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: space-around;
+}
+
+.contact{
+    flex-basis: 20%;
+}
+
+.col p{
+    margin-bottom: 1.5rem;
+}
+
+
+@media screen and (max-width: 600px) {
+    .column{
+        flex-direction: column;
+    }
+}
+
+
+

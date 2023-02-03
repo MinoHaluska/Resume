@@ -1,0 +1,49 @@
+.container{
+    display: flex;
+    flex-direction: column;
+    margin-top: 5rem;
+}
+
+h1{
+    display: inline-block;
+    margin: 0 auto;
+    position: relative;
+}
+
+h1::after{
+    content: '';
+    position: absolute;
+    width: 120%;
+    height: 4px;
+    background: var(--blue);
+    left: -10%;
+    bottom: 0;
+    border-radius: 2px;
+}
+
+
+ul{
+    display: flex;
+    margin: 0 auto;
+}
+
+li{
+    display: inline-block;
+    margin: 1rem 20px;
+    text-align: center;
+}
+
+li span{
+    font-weight: bold;
+    font-size: 1.5rem;
+}
+
+@media screen and (max-width: 610px) {
+    ul{
+        flex-direction: column;
+    }
+
+    li{
+        margin: 0.5rem;
+    }
+}

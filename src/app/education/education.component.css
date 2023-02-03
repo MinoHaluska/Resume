@@ -1,0 +1,49 @@
+.container{
+    display: flex;
+    flex-direction: column;
+    margin-top: 3rem;
+}
+
+h1{
+    display: inline-block;
+    margin: 0 auto 1.5rem;
+    position: relative;
+}
+
+h1::after{
+    content: '';
+    position: absolute;
+    width: 120%;
+    height: 4px;
+    background: var(--blue);
+    left: -10%;
+    bottom: 0;
+    border-radius: 2px;
+}
+
+.conEducation{
+    margin: 0 2rem 1rem;
+}
+
+.conEducation h2{
+    letter-spacing: 3px;
+}
+
+@media screen and (max-width: 440px) {
+    h1{
+        text-align: center;
+    }
+}
+
+@media screen and (max-width: 380px) {
+    .container{
+        margin-top: 1rem;
+    }
+
+    .conEducation{
+        margin: 0 0 1rem;
+        margin-bottom: 1.5rem;
+    }
+}
+
+

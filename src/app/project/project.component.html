@@ -1,0 +1,31 @@
+<div class="container">
+
+    <h1>Projekty</h1>
+
+    <div class="cards">
+
+        <div class="card" *ngFor="let project of projects">
+            <img [src]="project.img" [alt]="project.name">
+            <h3>{{ project.name }}</h3>
+            <div class="link">
+
+                <a *ngIf="project.ref !== 'none' " [href]="project.ref" target="_blank"><fa-icon [icon]="faEye" class="icon"></fa-icon>Try it</a>
+
+                <a [href]="project.git" target="_blank"><fa-icon [icon]="faCodeBranch" class="icon"></fa-icon>GitHub</a>
+            </div>
+        </div>
+
+    </div>
+
+    <button *ngIf="!more" (click)="giveMeMore()">
+        <fa-icon [icon]="faPlus" class="icon"></fa-icon>Viac
+    </button>
+
+    <button *ngIf="more" (click)="giveMeLess()">
+        <a href="#project">
+            <fa-icon [icon]="faMinus" class="icon"></fa-icon>Menej
+        </a>
+    </button>
+    
+   
+</div>
